@@ -540,10 +540,6 @@ onUnmounted(() => {
         </button>
       </section>
 
-      <p v-else class="scene-empty-state">
-        The painting is empty. Teach Longado one Chinese word to let it appear.
-      </p>
-
       <p v-if="errorMessage" class="world-error">{{ errorMessage }}</p>
 
       <div

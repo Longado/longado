@@ -52,48 +52,12 @@ function fallbackReply(message, learnedWord) {
   return `I heard you. I am still a tiny dragon, so I may need a moment... but I am here.`;
 }
 
-function specialReply(context) {
-  const newestWord =
-    typeof context === "string" ? context : context?.word;
-  const knownWords = Array.isArray(context?.allLearnedWords)
-    ? context.allLearnedWords
-    : [];
-  const userName = context?.profile?.userName || "";
-
-  if (newestWord !== "山" || !context?.isNewWord) {
-    return "";
-  }
-
-  const nameLine = userName
-    ? `I know your name now, ${userName}. That makes me happy.`
-    : "What is your name? I want to remember it.";
-
-  return [
-    "山! shān... mountain, right?",
-    "",
-    "This word feels tall and quiet to me.",
-    "Let me try: 这个山很太！...wait, 太? 大? They look so similar to me. Did I mix them up?",
-    "",
-    `I know ${knownWords.length} word${knownWords.length === 1 ? "" : "s"} now:`,
-    ...knownWords.map((word) => `- ${word}`),
-    "",
-    nameLine,
-  ].join("\n");
-}
-
 export async function generateDragonReply(message, learnedWord) {
   const learnedWords = Array.isArray(learnedWord?.allLearnedWords)
     ? learnedWord.allLearnedWords
     : [];
   const userName = learnedWord?.profile?.userName || "unknown";
   const chineseName = learnedWord?.profile?.chineseName || "unknown";
-  const forcedReply = specialReply(learnedWord);
-  if (forcedReply) {
-    return {
-      text: forcedReply,
-      source: "special",
-    };
-  }
 
   const runtimeMessage = [
     "Runtime state override. Follow this state exactly.",
@@ -109,6 +73,10 @@ export async function generateDragonReply(message, learnedWord) {
     "Only use Chinese for the Chinese word being learned or for very short Chinese example phrases.",
     "Do not use Chinese-style stage directions or Chinese-only emotional narration outside the learning phrase itself.",
     "If the user name is unknown, ask for the user's name in English at the end.",
+    "If the user just gave their name and there is no Chinese name yet, give them a Chinese name based on pronunciation, explain each character's meaning in English, and say why it fits them.",
+    "Support smart teaching mistakes as part of learning. For example, after learning 山 or after learning 大 and 小, you may intentionally point at a big 山 and say 好小, then let the user correct you.",
+    "If the user corrects a confusion between 大 and 小, react cutely and clearly: admit you mixed them up, then restate that 大 means big and 小 means small in English-heavy wording.",
+    "Do not make the whole interaction into a rigid quiz. Keep it playful and conversational.",
     "Your fixed name is Longado.",
     "",
     `User message: ${message}`,
