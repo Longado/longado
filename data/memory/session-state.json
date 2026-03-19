@@ -1,0 +1,29 @@
+{
+  "messages": [
+    {
+      "id": "seed-1",
+      "role": "assistant",
+      "speaker": "Longado",
+      "text": "I woke up in a painting... Is this 水墨? It feels soft and a little lonely.",
+      "createdAt": "2026-03-19T15:45:51.180Z"
+    },
+    {
+      "id": "seed-2",
+      "role": "assistant",
+      "speaker": "Longado",
+      "text": "What is your name? I want to remember the first human I met.",
+      "createdAt": "2026-03-19T15:45:51.180Z"
+    }
+  ],
+  "learnedWords": [],
+  "quiz": null,
+  "sleepLetter": null,
+  "profile": {
+    "userName": "",
+    "chineseName": ""
+  },
+  "meta": {
+    "createdAt": "2026-03-19T15:45:51.180Z",
+    "updatedAt": "2026-03-19T15:45:51.180Z"
+  }
+}
