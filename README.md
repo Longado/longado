@@ -1,53 +1,23 @@
-# Awaken Dragon
+# Eddie Lin · FDE
 
-`awakendragon` is a self-contained project for:
+I build **ontology tooling** and small, honest tools around **LLM agents** — shipping in public.
 
-- Name: 醒龙
-- English name: Awaken the Dragon
-- Role: a newly hatched little dragon learning Chinese with the user
+**Focus:** turn messy business tables/docs into checked, human-confirmed ontologies · adaptive process for coding agents · local-first agent workbenches.
 
-Everything related to this project lives under `awakendragon/`.
-Other top-level directories in this repository are unrelated.
+## Featured
 
-## Layout
+| Repo | What it is |
+|------|------------|
+| [**ontopoc**](https://github.com/Longado/ontopoc) | Draft an ontology from business tables or a document; code checks it against the data; a person confirms item by item. |
+| [**shifu**](https://github.com/Longado/shifu) | SHIFU (师父) — adaptive process depth for AI coding agents. |
+| [**crew**](https://github.com/Longado/crew) | Local agent workbench: see the project scene, dispatch task cards by dependency, accept one by one. |
+| [**claude-den**](https://github.com/Longado/claude-den) | A cozy terminal den for Claude Code. |
 
-- `agent/prompts/`: OpenClaw bootstrap files
-- `agent/scripts/`: sync scripts for the live OpenClaw workspace
-- `assets/dragon/`: source images for the dragon character
-- `app/canvas/`: future canvas UI source
-- `app/server/`: future project-local backend/API source
-- `app/shared/`: shared types and helpers
-- `data/`: generated assets, scene state, and structured memory
-- `docs/`: project notes and implementation docs
+## Elsewhere
 
-## Local setup
+- X: [@linyutai120479](https://x.com/linyutai120479)
+- GitHub: [@Longado](https://github.com/Longado)
 
-Sync the workspace files:
+---
 
-```bash
-node awakendragon/agent/scripts/sync-workspace.mjs
-```
-
-Register the agent in OpenClaw:
-
-```bash
-openclaw agents add awakendragon \
-  --workspace /Users/jianghao/.openclaw/workspace-awakendragon \
-  --model openai-codex/gpt-5.4 \
-  --non-interactive
-```
-
-Load identity from `IDENTITY.md`:
-
-```bash
-openclaw agents set-identity \
-  --agent awakendragon \
-  --workspace /Users/jianghao/.openclaw/workspace-awakendragon \
-  --from-identity
-```
-
-Then start a session:
-
-```bash
-openclaw tui --session agent:awakendragon:main
-```
+Eddie · Forward Deployed Engineer · AI product builder
