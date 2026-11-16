@@ -1,6 +1,6 @@
 # Eddie Lin · FDE
 
-**Ontology engineering** tools and **AI agents** — flagship [**OntoPoc**](https://github.com/Longado/ontopoc). Shipping in public.
+**Ontology engineering** tools and **AI agents** — flagship [**OntoPoc**](https://github.com/Longado/ontopoc) ([docs](https://longado.github.io/ontopoc/)). Shipping in public.
 
 I help turn messy business tables and documents into checked, human-confirmed ontologies, and I build local-first tooling for coding agents (Claude Code / Codex).
 
@@ -10,7 +10,7 @@ I help turn messy business tables and documents into checked, human-confirmed on
 
 | Repo | What it is |
 |------|------------|
-| [**OntoPoc**](https://github.com/Longado/ontopoc) | **Ontology engineering** — LLM drafts ontologies from business tables/docs; code validates against data; human confirms item by item. |
+| [**OntoPoc**](https://github.com/Longado/ontopoc) | **Ontology tool** for MCP / Claude — draft, check, and confirm ontologies from business data; ahead of a knowledge graph or semantic layer. [Docs](https://longado.github.io/ontopoc/). |
 | [**shifu**](https://github.com/Longado/shifu) | SHIFU (师父) — adaptive process depth for AI coding agents. |
 | [**crew**](https://github.com/Longado/crew) | Local agent workbench: dispatch task cards to Codex / Claude and accept one by one. |
 | [**prompt-slim**](https://github.com/Longado/prompt-slim) | Audit system prompts: find dead weight vs bare-model probes. |
@@ -18,7 +18,7 @@ I help turn messy business tables and documents into checked, human-confirmed on
 
 ## Keywords
 
-`ontology` · `ontology-engineering` · `knowledge-graph` · `llm-agents` · `human-in-the-loop` · `FDE` · `OntoPoc`
+`ontology` · `ontology-engineering` · `ontology-tool` · `knowledge-graph` · `semantic-layer` · `mcp` · `llm-agents` · `human-in-the-loop` · `FDE` · `OntoPoc`
 
 ## Elsewhere
 
